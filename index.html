@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    main {
+      margin-top: 24vh;
+    }
+    div {
+      align-items: center;
+      text-align: center;
+      margin: auto;
+    }
+    input {
+      font-size: x-large;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <div>
+      <h3>Type a character in the input field.</h3>
+      <h3>The unicode value of the last character is displayed.</h1>
+      <input type="text" size="20" onkeypress="myFunction(event)">
+      <h1 id="demo">Type away... </h1>
+    </div>
+  </main>
+
+  <script>
+    function myFunction(event) {
+      var x = event.which
+      document.getElementById("demo").innerHTML = `The unicode value is ${x}`
+    }
+  </script>
+</body>
+</html>
